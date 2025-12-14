@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Large models / zip
+giftbox-model/
+giftbox_model.zip
+
+# Others
+.DS_Store
