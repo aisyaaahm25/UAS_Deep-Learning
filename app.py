@@ -8,12 +8,12 @@ st.markdown(
     <style>
     /* Background baby pink */
     .stApp {
-        background-color: #ffdde1;
+        background-color: #ffeaf1;
     }
 
     /* Judul warna pink */
     .title-text {
-        color: #ff8da1;
+        color: #ff99b9;
         font-size: 48px;
         font-weight: bold;
         text-align: center;
@@ -21,7 +21,7 @@ st.markdown(
 
     /* Subtitle / teks biasa */
     .subtitle-text {
-        color: #4b004b;
+        color: #1e3370;
         font-size: 20px;
         text-align: center;
     }
