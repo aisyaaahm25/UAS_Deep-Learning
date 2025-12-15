@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 st.set_page_config(
     page_title="HeartStory AI",
     page_icon="💝",
-    layout="centered"
+    layout="wide"
 )
 
 # ================== CUSTOM CSS ==================
@@ -201,3 +201,4 @@ if generate:
     st.subheader("💌 HeartStory Message")
     st.text_area("Pesan AI", final_output, height=160)
     st.markdown('</div>', unsafe_allow_html=True)
+
