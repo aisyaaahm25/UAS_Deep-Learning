@@ -6,29 +6,60 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 st.markdown(
     """
     <style>
-    /* Background baby pink */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&family=Baloo+2:wght@600;700&display=swap');
+
+    /* Background */
     .stApp {
         background-color: #ffeaf1;
     }
 
-    /* Judul warna pink */
-    .title-text {
-        color: #ff99b9;
-        font-size: 48px;
-        font-weight: bold;
+    /* Wrapper title */
+    .logo-container {
         text-align: center;
+        margin-bottom: 10px;
     }
 
-    /* Subtitle / teks biasa */
-    .subtitle-text {
+    /* Script H */
+    .logo-h {
+        font-family: 'Great Vibes', cursive;
+        font-size: 90px;
         color: #1e3370;
-        font-size: 20px;
+        display: inline-block;
+        margin-right: -10px;
+    }
+
+    /* HEARTSTORY AI */
+    .logo-main {
+        font-family: 'Cinzel', serif;
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: #1e3370;
+        display: inline-block;
+    }
+
+    /* Tagline */
+    .tagline {
+        font-family: 'Baloo 2', cursive;
+        font-size: 36px;
+        font-weight: 700;
+        color: #1e3370;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    /* Subtitle biasa */
+    .subtitle-text {
+        font-family: 'Baloo 2', cursive;
+        color: #1e3370;
+        font-size: 18px;
         text-align: center;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # ======= Load model =======
 MODEL_PATH = "aisyaaahm25/giftbox-model"
@@ -45,8 +76,21 @@ def load_model():
 tokenizer, model = load_model()
 
 # ======= Title & subtitle =======
-st.markdown('<div class="title-text">🎁 Giftbox Personal Message Generator</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle-text">Buat ucapan personal sesuai acara dengan AI</div>', unsafe_allow_html=True)
+st.markdown(
+    """
+    <div class="logo-container">
+        <span class="logo-h">H</span>
+        <span class="logo-main">EARTSTORY AI</span>
+    </div>
+    <div class="tagline">CRAFTING STORIES IN EVERY GIFT</div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    '<div class="subtitle-text">Buat ucapan personal sesuai acara dengan AI</div>',
+    unsafe_allow_html=True
+)
 
 # ======= User inputs =======
 acara = st.selectbox(
