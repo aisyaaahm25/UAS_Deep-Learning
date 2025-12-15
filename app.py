@@ -31,7 +31,7 @@ st.markdown(
 )
 
 # ======= Load model =======
-MODEL_PATH = "./giftbox-model"
+MODEL_PATH = "aisyaaahm25/giftbox-model"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 @st.cache_resource(show_spinner=False)
